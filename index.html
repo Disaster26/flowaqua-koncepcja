@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow" data-podglad>
-<title>Nauka pływania w Warszawie i Gdyni | FlowAqua Akademia Pływania</title>
-<meta name="description" content="Nauka pływania dla niemowląt, dzieci i dorosłych w Warszawie (Mokotów, Ochota) i w Gdyni. Aqua Baby, Aqua Kids, zajęcia indywidualne i aqua fitness. Pływaj z nami cały rok.">
+<title>Indywidualna nauka pływania w Warszawie i Gdyni | FlowAqua Akademia Pływania</title>
+<meta name="description" content="Indywidualna nauka pływania dla niemowląt z rodzicem, dzieci i dorosłych w Warszawie (Mokotów, Ochota) i w Gdyni. Wybierz instruktora i wolny termin, zarezerwuj lekcję online. Pływaj z nami cały rok.">
 <link rel="icon" type="image/png" href="img/znak-niebieski.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="fonts/figtree-rdzen.woff2" as="font" type="font/woff2" crossorigin>
@@ -60,8 +60,8 @@ p{margin:0}
 .hero .tlo{object-fit:cover;object-position:50% 62%;transform:scaleX(-1)}
 .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(3,32,82,.86) 0%,rgba(3,32,82,.62) 34%,rgba(3,32,82,0) 62%),linear-gradient(180deg,rgba(3,32,82,.45) 0%,rgba(3,32,82,0) 22%)}
 .hero .kont{position:relative;z-index:2;width:var(--pas);padding:130px 0 150px}
-.hero-txt{max-width:780px}
-.hero h1{font-size:clamp(40px,4.6vw,72px);font-weight:850;letter-spacing:-.02em}
+.hero-txt{max-width:820px}
+.hero h1{font-size:clamp(40px,4.3vw,68px);font-weight:850;letter-spacing:-.02em}
 .hero h1 span{display:block;font-size:.5em;font-weight:600;letter-spacing:0;margin-top:14px;opacity:.95}
 .hero .lead{font-size:clamp(17px,1.35vw,21px);margin-top:22px;max-width:540px;color:#EAF1FF}
 .hero .akcje{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
@@ -162,28 +162,54 @@ section{position:relative}
 .galeria img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .galeria .karta-g:hover img{transform:scale(1.03)}
 
-/* zapisy */
-.zapisy{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(30px,5vw,90px);align-items:start}
+/* rezerwacja */
+.rez-siatka{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(30px,5vw,90px);align-items:start}
 .kroki{list-style:none;padding:0;margin:28px 0 0;counter-reset:k}
 .kroki li{counter-increment:k;padding:16px 0 16px 46px;position:relative;border-bottom:1px solid var(--li);color:var(--tx2)}
 .kroki li::before{content:counter(k);position:absolute;left:0;top:14px;font-weight:800;font-size:22px;color:var(--nb)}
 .kroki b{color:var(--gr);display:block}
+.odwolanie{margin-top:22px;padding:16px 18px;background:var(--sz);border-left:4px solid var(--nb);border-radius:6px;color:var(--gr);font-weight:600;font-size:16px}
 .kontakt-bezp{margin-top:28px;display:flex;flex-direction:column;gap:6px;font-size:17px}
 .kontakt-bezp a{font-weight:700;text-decoration:none}
 .kontakt-bezp .godz{color:var(--tx2);font-size:15px}
-form{background:#fff;border-radius:12px;padding:clamp(24px,3vw,40px);box-shadow:0 14px 40px rgba(6,44,102,.08)}
-form h3{color:var(--gr);font-size:26px;margin-bottom:20px}
-.pola{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.pole{display:flex;flex-direction:column;gap:6px}
-.pole.cale{grid-column:1/-1}
-label{font-weight:600;font-size:15px}
-input,select,textarea{font:inherit;font-size:16px;color:var(--tx);border:1.5px solid #C3CFE0;border-radius:8px;padding:12px 14px;background:#fff;width:100%}
-input:focus,select:focus,textarea:focus{outline:2px solid var(--nb);outline-offset:1px;border-color:var(--nb)}
-textarea{min-height:110px;resize:vertical}
-.zgoda{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:14px;color:var(--tx2);grid-column:1/-1}
-.zgoda input{width:20px;height:20px;flex:none;margin-top:2px}
-form .przycisk{margin-top:20px;width:100%}
+.rez{background:#fff;border-radius:12px;padding:clamp(20px,2.6vw,36px);box-shadow:0 14px 40px rgba(6,44,102,.09);border:1px solid var(--li)}
+.rez-krok{padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid var(--li)}
+.rez-krok.dwa{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.rez h3{font-size:17px;color:var(--gr);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.rez h3 span{width:26px;height:26px;border-radius:50%;background:var(--nb);color:#fff;display:grid;place-items:center;font-size:14px;flex:none}
+.wybor{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.opcja{font:inherit;font-weight:700;font-size:15px;color:var(--gr);background:#fff;border:1.5px solid #C3CFE0;border-radius:8px;padding:12px 10px;cursor:pointer;text-align:left;display:flex;flex-direction:column;gap:2px;line-height:1.25}
+.opcja small{font-weight:500;color:var(--tx2);font-size:13px}
+.opcja:hover{border-color:var(--nb)}
+.opcja.on{border-color:var(--nb);background:#EAF1FC;box-shadow:inset 0 0 0 1px var(--nb)}
+select{font:inherit;font-size:16px;color:var(--tx);border:1.5px solid #C3CFE0;border-radius:8px;padding:12px 14px;background:#fff;width:100%}
+select:focus{outline:2px solid var(--nb);outline-offset:1px}
+.kal-gora{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.kal-gora h3{margin-bottom:12px}
+.kal-nav{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--tx2);margin-bottom:12px}
+.kal-nav button{width:34px;height:34px;border-radius:50%;border:1.5px solid #C3CFE0;background:#fff;color:var(--nb);display:grid;place-items:center;cursor:pointer}
+.kal-nav button:disabled{opacity:.35;cursor:default}
+.kal-nav svg{width:16px;height:16px}
+.kal{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.dzien{font:inherit;border:1.5px solid #C3CFE0;background:#fff;border-radius:8px;padding:8px 2px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:1px;color:var(--gr)}
+.dzien small{font-size:12px;color:var(--tx2);font-weight:600;text-transform:lowercase}
+.dzien b{font-size:19px;font-weight:800}
+.dzien i{font-style:normal;font-size:11px;color:#1E8E4E;font-weight:700}
+.dzien:hover{border-color:var(--nb)}
+.dzien.on{background:var(--nb);border-color:var(--nb);color:#fff}
+.dzien.on small,.dzien.on i{color:#DCE8FF}
+.dzien:disabled{background:#F3F5F8;color:#A9B3C4;border-color:#E3E8EF;cursor:default}
+.dzien:disabled small,.dzien:disabled i{color:#A9B3C4}
+.godziny{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.godz-b{font:inherit;font-weight:700;font-size:15px;border:1.5px solid #C3CFE0;background:#fff;border-radius:8px;padding:10px 4px;cursor:pointer;color:var(--gr)}
+.godz-b:hover{border-color:var(--nb)}
+.godz-b.on{background:var(--nb);border-color:var(--nb);color:#fff}
+.godz-b:disabled{background:#F3F5F8;color:#B5BECC;border-color:#E3E8EF;text-decoration:line-through;cursor:default}
+.godz-brak{grid-column:1/-1;color:var(--tx2);font-size:15px}
+.rez-podsum p:first-child{color:var(--gr);font-weight:600;min-height:26px}
+.rez-podsum .przycisk{margin-top:14px;width:100%}
 .info-form{margin-top:12px;font-size:14px;color:var(--tx2);text-align:center;min-height:20px}
+@media(max-width:767px){.dzien i{font-size:0}.dzien i::after{content:"";display:block;width:6px;height:6px;border-radius:50%;background:currentColor;margin:3px auto 0}.dzien:disabled i::after{display:none}.wybor{grid-template-columns:1fr}.opcja{flex-direction:row;justify-content:space-between;align-items:center}.rez-krok.dwa{grid-template-columns:1fr}}
 
 /* stopka */
 footer{background:var(--gr);color:#C9D6EE;padding:70px 0 30px;font-size:15px;position:relative}
@@ -221,7 +247,7 @@ footer a:hover{text-decoration:underline}
   .ciemna-siatka{grid-template-columns:1fr}
   .ciemna-foto{aspect-ratio:16/10}
   .ciemna-txt{padding-top:56px;padding-bottom:110px}
-  .lokalizacje,.zapisy{grid-template-columns:1fr}
+  .lokalizacje,.rez-siatka{grid-template-columns:1fr}
   .stopka-siatka{grid-template-columns:1fr 1fr}
 }
 @media(max-width:980px){
@@ -243,7 +269,7 @@ footer a:hover{text-decoration:underline}
   .hero .tlo{position:relative;transform:none;height:auto;aspect-ratio:3/4;object-position:50% 0}
   .hero::before{display:none}
   .hero .kont{padding:110px 0 54px}
-  .hero h1{font-size:clamp(31px,8.6vw,38px)}
+  .hero h1{font-size:clamp(28px,7.8vw,36px)}
   .hero h1 span{font-size:.56em;margin-top:8px}
   .hero .lead{margin-top:12px;font-size:16px;line-height:1.5}
   .hero .akcje{margin-top:24px;gap:10px}
@@ -251,7 +277,8 @@ footer a:hover{text-decoration:underline}
   .fala-dol{height:26px}
   .cennik{grid-template-columns:1fr}
   .strzalki{display:none}
-  .pola{grid-template-columns:1fr}
+  .kal{grid-template-columns:repeat(7,1fr);gap:6px}
+  .godziny{grid-template-columns:repeat(3,1fr)}
   .mapa{min-height:340px}
   .stopka-siatka{grid-template-columns:1fr 1fr;gap:30px 20px}
   .stopka-siatka>div:first-child{grid-column:1/-1}
@@ -259,7 +286,7 @@ footer a:hover{text-decoration:underline}
 }
 @media(max-width:767px) and (max-height:700px){
   .hero .kont{padding:96px 0 44px}
-  .hero h1{font-size:30px}
+  .hero h1{font-size:27px}
   .hero .lead{font-size:15px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
@@ -275,11 +302,11 @@ footer a:hover{text-decoration:underline}
     </a>
     <nav class="menu" id="menu" aria-label="Menu główne">
       <button class="zamknij" type="button" aria-label="Zamknij menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
-      <a href="#zajecia">Zajęcia</a>
+      <a href="#zajecia">Lekcje</a>
       <a href="#cennik">Cennik</a>
       <a href="#o-nas">O nas</a>
       <a href="#baseny">Baseny</a>
-      <a href="#zapisy">Zapisy</a>
+      <a href="#rezerwacja">Rezerwacja</a>
       <a class="tel" href="tel:+48511494432"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>511 494 432</a>
     </nav>
     <button class="burger" type="button" aria-label="Otwórz menu" aria-controls="menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -294,10 +321,10 @@ footer a:hover{text-decoration:underline}
   </picture>
   <div class="kont">
     <div class="hero-txt">
-      <h1>Nauka pływania w&nbsp;Warszawie i&nbsp;Gdyni<span>Pływaj z nami cały rok</span></h1>
-      <p class="lead">Oswajamy z wodą niemowlęta, uczymy pływać dzieci i dorosłych, prowadzimy aqua fitness. Na&nbsp;Mokotowie, Ochocie i&nbsp;w&nbsp;Gdyni.</p>
+      <h1>Indywidualna nauka pływania w&nbsp;Warszawie i&nbsp;Gdyni<span>Pływaj z nami cały rok</span></h1>
+      <p class="lead">Lekcje jeden na jeden z instruktorem: niemowlęta z rodzicem, dzieci i dorośli. Wybierz instruktora i wolny termin, a lekcję opłać online.</p>
       <div class="akcje">
-        <a class="przycisk bi" href="#zapisy">Zapisz się na zajęcia</a>
+        <a class="przycisk bi" href="#rezerwacja">Zarezerwuj termin</a>
         <a class="przycisk ob" href="tel:+48511494432"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>511 494 432</a>
       </div>
     </div>
@@ -309,20 +336,19 @@ footer a:hover{text-decoration:underline}
   <div class="kont naglowek-sek" style="width:var(--pas)">
     <div>
       <svg class="fala-linia" viewBox="0 0 92 14" aria-hidden="true"><path d="M2 9c7-6 14-6 21 0s14 6 21 0 14-6 21 0 14 6 21 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
-      <h2>Zajęcia od 3.&nbsp;miesiąca życia do&nbsp;dorosłości</h2>
+      <h2>Lekcje indywidualne od 3.&nbsp;miesiąca życia do&nbsp;dorosłości</h2>
     </div>
-    <p>Program dopasowujemy do wieku i umiejętności. Każdy rozwija się w swoim tempie, a bezpieczeństwo jest zawsze na pierwszym miejscu.</p>
+    <p>Instruktor zajmuje się tylko Tobą albo Twoim dzieckiem. Program dopasowujemy do wieku i umiejętności, a bezpieczeństwo jest zawsze na pierwszym miejscu.</p>
     <div class="strzalki" data-pas="pas-zajecia"><button type="button" class="wstecz" aria-label="Poprzednie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" class="dalej" aria-label="Następne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button></div>
   </div>
   <div class="pas-gl">
     <div class="pas" id="pas-zajecia">
-      <article class="karta"><div class="fotki"><div class="tasma"><img src="img/baby1-900.webp" srcset="img/baby1-600.webp 600w, img/baby1-900.webp 900w, img/baby1-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Niemowlę na zajęciach Aqua Baby z instruktorką" data-duze="img/baby1-1600.webp" loading="lazy" draggable="false"><img src="img/baby2-900.webp" srcset="img/baby2-600.webp 600w, img/baby2-900.webp 900w, img/baby2-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Maluszek trzymany w wodzie przez rodzica" data-duze="img/baby2-1600.webp" loading="lazy" draggable="false"><img src="img/baby3-900.webp" srcset="img/baby3-600.webp 600w, img/baby3-900.webp 900w, img/baby3-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Rodzic z niemowlęciem w basenie" data-duze="img/baby3-1600.webp" loading="lazy" draggable="false"><img src="img/baby4-900.webp" srcset="img/baby4-600.webp 600w, img/baby4-900.webp 900w, img/baby4-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Dziecko siedzi na brzegu basenu" data-duze="img/baby4-1600.webp" loading="lazy" draggable="false"></div><span class="licznik">1 / 4</span><button class="st l" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><button class="st p" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button><svg class="fala-k" viewBox="0 0 400 26" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 14C50 2 100 2 150 12s100 16 150 8 70-14 100-10v16H0z"/></svg></div><div class="opis"><span class="wiek">od 3 do 24 miesięcy, z rodzicem</span><h3>Aqua Baby</h3><p>Oswajamy maluszka z wodą przez zabawę i piosenki. Rodzic uczy się chwytów, bezpiecznej asekuracji i pomocy przy zachłyśnięciu.</p><p class="gdzie">OSiR Mokotów</p><a class="zapisz" href="#zapisy" data-zaj="Aqua Baby">Zapisz się &rarr;</a></div></article>
-      <article class="karta"><div class="fotki"><div class="tasma"><img src="img/kids1-900.webp" srcset="img/kids1-600.webp 600w, img/kids1-900.webp 900w, img/kids1-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Dziewczynka z makaronem na zajęciach Aqua Kids" data-duze="img/kids1-1600.webp" loading="lazy" draggable="false"><img src="img/kids2-900.webp" srcset="img/kids2-600.webp 600w, img/kids2-900.webp 900w, img/kids2-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Dzieci na ławce przy basenie" data-duze="img/kids2-1600.webp" loading="lazy" draggable="false"><img src="img/kids3-900.webp" srcset="img/kids3-600.webp 600w, img/kids3-900.webp 900w, img/kids3-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Uśmiechnięta dziewczynka w basenie" data-duze="img/kids3-1600.webp" loading="lazy" draggable="false"><img src="img/kids4-900.webp" srcset="img/kids4-600.webp 600w, img/kids4-900.webp 900w, img/kids4-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Dziecko pływa z kółkiem" data-duze="img/kids4-1600.webp" loading="lazy" draggable="false"></div><span class="licznik">1 / 4</span><button class="st l" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><button class="st p" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button><svg class="fala-k" viewBox="0 0 400 26" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 14C50 2 100 2 150 12s100 16 150 8 70-14 100-10v16H0z"/></svg></div><div class="opis"><span class="wiek">od 2 lat, z rodzicem i w grupach</span><h3>Aqua Kids</h3><p>Skoki do wody, pływanie na brzuchu i plecach z makaronem lub deską, nurkowanie na komendę i świadomy oddech.</p><p class="gdzie">OSiR Mokotów, CRS WUM Ochota</p><a class="zapisz" href="#zapisy" data-zaj="Aqua Kids">Zapisz się &rarr;</a></div></article>
-      <article class="karta"><div class="fotki"><div class="tasma"><img src="img/pro1-900.webp" srcset="img/pro1-600.webp 600w, img/pro1-900.webp 900w, img/pro1-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="900" alt="Instruktorka FlowAqua z uczennicą przy brzegu basenu" data-duze="img/pro1-1600.webp" loading="lazy" draggable="false"><img src="img/pro2-900.webp" srcset="img/pro2-600.webp 600w, img/pro2-900.webp 900w, img/pro2-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Instruktorka przy brzegu basenu" data-duze="img/pro2-1600.webp" loading="lazy" draggable="false"><img src="img/pro3-900.webp" srcset="img/pro3-600.webp 600w, img/pro3-900.webp 900w, img/pro3-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="1600" alt="Chłopiec w okularkach pływackich" data-duze="img/pro3-1600.webp" loading="lazy" draggable="false"></div><span class="licznik">1 / 3</span><button class="st l" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><button class="st p" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button><svg class="fala-k" viewBox="0 0 400 26" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 14C50 2 100 2 150 12s100 16 150 8 70-14 100-10v16H0z"/></svg></div><div class="opis"><span class="wiek">zajęcia indywidualne, 1-3 osoby</span><h3>Aqua Pro</h3><p>Nauka od podstaw i doskonalenie stylów: grzbiet, kraul, żabka, delfin, skoki startowe i nawroty. Termin dopasowany do Ciebie.</p><p class="gdzie">OSiR Mokotów, CRS WUM Ochota</p><a class="zapisz" href="#zapisy" data-zaj="Aqua Pro">Zapisz się &rarr;</a></div></article>
-      <article class="karta"><div class="fotki"><div class="tasma"><img src="img/fitness1-900.webp" srcset="img/fitness1-600.webp 600w, img/fitness1-900.webp 900w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="900" height="600" alt="Pływaczka podczas treningu w basenie" data-duze="img/fitness1-900.webp" loading="lazy" draggable="false"><img src="img/fitness2-900.webp" srcset="img/fitness2-600.webp 600w, img/fitness2-900.webp 900w, img/fitness2-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="1200" alt="Trening na torach basenu" data-duze="img/fitness2-1600.webp" loading="lazy" draggable="false"></div><span class="licznik">1 / 2</span><button class="st l" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><button class="st p" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button><svg class="fala-k" viewBox="0 0 400 26" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 14C50 2 100 2 150 12s100 16 150 8 70-14 100-10v16H0z"/></svg></div><div class="opis"><span class="wiek">dla każdego od 16 lat</span><h3>Aqua Fitness</h3><p>Trening w wodzie bez obciążania stawów i kręgosłupa. Poprawia kondycję, odpręża i nadaje się także dla kobiet w ciąży.</p><p class="gdzie">Wodny Park Warszawianka</p><a class="zapisz" href="#zapisy" data-zaj="Aqua Fitness">Zapisz się &rarr;</a></div></article>
-      <article class="karta"><div class="fotki"><div class="tasma"><img src="img/grupy1-900.webp" srcset="img/grupy1-600.webp 600w, img/grupy1-900.webp 900w, img/grupy1-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="900" alt="Grupa dzieci na zajęciach w basenie" data-duze="img/grupy1-1600.webp" loading="lazy" draggable="false"><img src="img/grupy2-900.webp" srcset="img/grupy2-600.webp 600w, img/grupy2-900.webp 900w, img/grupy2-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="900" alt="Zajęcia grupowe na torach basenu" data-duze="img/grupy2-1600.webp" loading="lazy" draggable="false"><img src="img/grupy3-900.webp" srcset="img/grupy3-600.webp 600w, img/grupy3-900.webp 900w, img/grupy3-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Piłki i zabawki na zajęciach w basenie" data-duze="img/grupy3-1600.webp" loading="lazy" draggable="false"></div><span class="licznik">1 / 3</span><button class="st l" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><button class="st p" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button><svg class="fala-k" viewBox="0 0 400 26" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 14C50 2 100 2 150 12s100 16 150 8 70-14 100-10v16H0z"/></svg></div><div class="opis"><span class="wiek">przedszkola, szkoły, firmy</span><h3>Grupy zorganizowane</h3><p>Zajęcia dla grup przedszkolnych, szkolnych i firmowych, prowadzone przez naszą kadrę na wybranym basenie.</p><p class="gdzie">Warszawa i Gdynia</p><a class="zapisz" href="#zapisy" data-zaj="Grupa zorganizowana">Zapisz się &rarr;</a></div></article>
+      <article class="karta"><div class="fotki"><div class="tasma"><img src="img/baby1-900.webp" srcset="img/baby1-600.webp 600w, img/baby1-900.webp 900w, img/baby1-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Niemowlę na lekcji z instruktorką" data-duze="img/baby1-1600.webp" loading="lazy" draggable="false"><img src="img/baby2-900.webp" srcset="img/baby2-600.webp 600w, img/baby2-900.webp 900w, img/baby2-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Maluszek trzymany w wodzie przez rodzica" data-duze="img/baby2-1600.webp" loading="lazy" draggable="false"><img src="img/baby3-900.webp" srcset="img/baby3-600.webp 600w, img/baby3-900.webp 900w, img/baby3-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Rodzic z niemowlęciem w basenie" data-duze="img/baby3-1600.webp" loading="lazy" draggable="false"><img src="img/baby4-900.webp" srcset="img/baby4-600.webp 600w, img/baby4-900.webp 900w, img/baby4-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Dziecko siedzi na brzegu basenu" data-duze="img/baby4-1600.webp" loading="lazy" draggable="false"></div><span class="licznik">1 / 4</span><button class="st l" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><button class="st p" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button><svg class="fala-k" viewBox="0 0 400 26" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 14C50 2 100 2 150 12s100 16 150 8 70-14 100-10v16H0z"/></svg></div><div class="opis"><span class="wiek">od 3 do 24 miesięcy</span><h3>Niemowlęta z rodzicem</h3><p>Instruktor pokazuje rodzicowi chwyty i bezpieczną asekurację, a maluszek oswaja się z wodą przez zabawę i piosenki.</p><p class="gdzie">OSiR Mokotów</p><a class="zapisz" href="#rezerwacja">Zarezerwuj termin &rarr;</a></div></article>
+      <article class="karta"><div class="fotki"><div class="tasma"><img src="img/kids1-900.webp" srcset="img/kids1-600.webp 600w, img/kids1-900.webp 900w, img/kids1-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Dziewczynka z makaronem na lekcji pływania" data-duze="img/kids1-1600.webp" loading="lazy" draggable="false"><img src="img/kids3-900.webp" srcset="img/kids3-600.webp 600w, img/kids3-900.webp 900w, img/kids3-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Uśmiechnięta dziewczynka w basenie" data-duze="img/kids3-1600.webp" loading="lazy" draggable="false"><img src="img/kids4-900.webp" srcset="img/kids4-600.webp 600w, img/kids4-900.webp 900w, img/kids4-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Dziecko pływa z kółkiem" data-duze="img/kids4-1600.webp" loading="lazy" draggable="false"><img src="img/kids2-900.webp" srcset="img/kids2-600.webp 600w, img/kids2-900.webp 900w, img/kids2-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Dzieci na ławce przy basenie" data-duze="img/kids2-1600.webp" loading="lazy" draggable="false"></div><span class="licznik">1 / 4</span><button class="st l" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><button class="st p" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button><svg class="fala-k" viewBox="0 0 400 26" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 14C50 2 100 2 150 12s100 16 150 8 70-14 100-10v16H0z"/></svg></div><div class="opis"><span class="wiek">od 2 lat</span><h3>Dzieci</h3><p>Skoki do wody, pływanie na brzuchu i plecach, nurkowanie na komendę i świadomy oddech, w tempie dopasowanym do dziecka.</p><p class="gdzie">OSiR Mokotów, CRS WUM Ochota, Gdynia</p><a class="zapisz" href="#rezerwacja">Zarezerwuj termin &rarr;</a></div></article>
+      <article class="karta"><div class="fotki"><div class="tasma"><img src="img/fitness1-900.webp" srcset="img/fitness1-600.webp 600w, img/fitness1-900.webp 900w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="900" height="600" alt="Pływak podczas lekcji w basenie" data-duze="img/fitness1-900.webp" loading="lazy" draggable="false"><img src="img/pro2-900.webp" srcset="img/pro2-600.webp 600w, img/pro2-900.webp 900w, img/pro2-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Instruktorka przy brzegu basenu" data-duze="img/pro2-1600.webp" loading="lazy" draggable="false"><img src="img/fitness2-900.webp" srcset="img/fitness2-600.webp 600w, img/fitness2-900.webp 900w, img/fitness2-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="1200" alt="Pływanie na torach basenu" data-duze="img/fitness2-1600.webp" loading="lazy" draggable="false"></div><span class="licznik">1 / 3</span><button class="st l" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><button class="st p" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button><svg class="fala-k" viewBox="0 0 400 26" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 14C50 2 100 2 150 12s100 16 150 8 70-14 100-10v16H0z"/></svg></div><div class="opis"><span class="wiek">nauka od podstaw</span><h3>Dorośli</h3><p>Przełamanie lęku przed wodą, oddychanie, leżenie na wodzie i pierwsze style. Bez pośpiechu, z instruktorem tylko dla Ciebie.</p><p class="gdzie">OSiR Mokotów, CRS WUM Ochota, Gdynia</p><a class="zapisz" href="#rezerwacja">Zarezerwuj termin &rarr;</a></div></article>
+      <article class="karta"><div class="fotki"><div class="tasma"><img src="img/pro1-900.webp" srcset="img/pro1-600.webp 600w, img/pro1-900.webp 900w, img/pro1-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="900" alt="Instruktorka FlowAqua z uczennicą przy brzegu basenu" data-duze="img/pro1-1600.webp" loading="lazy" draggable="false"><img src="img/pro3-900.webp" srcset="img/pro3-600.webp 600w, img/pro3-900.webp 900w, img/pro3-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="1600" alt="Chłopiec w okularkach pływackich" data-duze="img/pro3-1600.webp" loading="lazy" draggable="false"><img src="img/g10-900.webp" srcset="img/g10-600.webp 600w, img/g10-900.webp 900w, img/g10-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="2133" alt="Dziecko z instruktorką na lekcji" data-duze="img/g10-1600.webp" loading="lazy" draggable="false"></div><span class="licznik">1 / 3</span><button class="st l" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><button class="st p" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button><svg class="fala-k" viewBox="0 0 400 26" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 14C50 2 100 2 150 12s100 16 150 8 70-14 100-10v16H0z"/></svg></div><div class="opis"><span class="wiek">dla pływających</span><h3>Doskonalenie techniki</h3><p>Grzbiet, kraul, żabka i delfin, skoki startowe i nawroty. Dla dzieci i dorosłych, którzy chcą pływać szybciej i lepiej.</p><p class="gdzie">OSiR Mokotów, CRS WUM Ochota</p><a class="zapisz" href="#rezerwacja">Zarezerwuj termin &rarr;</a></div></article>
+      <article class="karta"><div class="fotki"><div class="tasma"><img src="img/g8-900.webp" srcset="img/g8-600.webp 600w, img/g8-900.webp 900w, img/g8-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="1600" alt="Dwie dziewczynki przy brzegu basenu" data-duze="img/g8-1600.webp" loading="lazy" draggable="false"><img src="img/grupy2-900.webp" srcset="img/grupy2-600.webp 600w, img/grupy2-900.webp 900w, img/grupy2-1600.webp 1600w" sizes="(max-width:767px) 82vw, (max-width:1279px) 45vw, (max-width:1699px) 33vw, 460px" width="1600" height="900" alt="Dzieci z instruktorką przy basenie" data-duze="img/grupy2-1600.webp" loading="lazy" draggable="false"></div><span class="licznik">1 / 2</span><button class="st l" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><button class="st p" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button><svg class="fala-k" viewBox="0 0 400 26" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 14C50 2 100 2 150 12s100 16 150 8 70-14 100-10v16H0z"/></svg></div><div class="opis"><span class="wiek">rodzeństwo, para, znajomi</span><h3>Lekcje dla 2-3 osób</h3><p>Jeden instruktor dla dwóch lub trzech osób na podobnym poziomie. Taniej w przeliczeniu na osobę.</p><p class="gdzie">OSiR Mokotów</p><a class="zapisz" href="#rezerwacja">Zarezerwuj termin &rarr;</a></div></article>
     </div>
-    <p class="dodatkowo">Latem: <b>obozy sportowo-rozwojowe</b> w Pieckach i w Gdyni oraz <b>Babski Weekend</b>. Prowadzimy też szkolenia dla instruktorów.</p>
   </div>
 </section>
 
@@ -333,7 +359,7 @@ footer a:hover{text-decoration:underline}
         <svg class="fala-linia" viewBox="0 0 92 14" aria-hidden="true"><path d="M2 9c7-6 14-6 21 0s14 6 21 0 14-6 21 0 14 6 21 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
         <h2>Cennik</h2>
       </div>
-      <p>Ceny za jedne zajęcia. Przy zajęciach indywidualnych do ceny dochodzi bilet wejścia na basen.</p>
+      <p>Ceny za jedną lekcję. Do ceny dochodzi bilet wejścia na basen.</p>
     </div>
     <div class="cennik">
       <div class="cena">
@@ -349,13 +375,13 @@ footer a:hover{text-decoration:underline}
         <p class="uw">Cena za zajęcia dla dwóch osób.</p>
       </div>
       <div class="cena">
-        <h3>Grupowe z rodzicem</h3>
-        <p class="dla">OSiR Mokotów, ul. Niegocińska 2A<br>dzieci od 2 do 6 lat, grupy 4-osobowe</p>
-        <dl><dt>30 minut</dt><dd>120 <small>zł</small></dd></dl>
-        <p class="uw">Wejście na basen w cenie. W zajęciach bierze udział jeden rodzic z dzieckiem.</p>
+        <h3>Indywidualne, Ochota</h3>
+        <p class="dla">CRS WUM, ul. Księcia Trojdena 2C<br>od 3 miesięcy do 100 lat</p>
+        <dl><dt>30 minut</dt><dd>200 <small>zł</small></dd></dl>
+        <p class="uw">Do ceny dochodzi bilet wejścia na basen.</p>
       </div>
     </div>
-    <p class="cennik-st">CRS WUM Ochota, ul. Księcia Trojdena 2C: zajęcia indywidualne 30 minut - 200 zł (plus wejście na basen).</p>
+    <p class="cennik-st">Ceny według obecnego cennika. Lekcję można bezpłatnie odwołać do 24 godzin przed jej rozpoczęciem.</p>
   </div>
 </section>
 
@@ -366,13 +392,13 @@ footer a:hover{text-decoration:underline}
     <div class="ciemna-txt">
       <svg class="fala-linia" viewBox="0 0 92 14" aria-hidden="true" style="color:#7FB0FF"><path d="M2 9c7-6 14-6 21 0s14 6 21 0 14-6 21 0 14 6 21 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
       <h2>Sami jesteśmy rodzicami</h2>
-      <p class="cyt">Wiemy, jakim zaufaniem obdarzają nas Państwo, powierzając nam swoje dzieci. Dlatego bezpieczeństwo jest u nas zawsze na pierwszym miejscu, a nauka odbywa się przez zabawę, w spokojnym tempie i z indywidualnym podejściem.</p>
+      <p class="cyt">Wiemy, jakim zaufaniem obdarzają nas Państwo, powierzając nam swoje dzieci. Dlatego uczymy indywidualnie: instruktor jest cały czas przy uczniu, bezpieczeństwo jest zawsze na pierwszym miejscu, a nauka idzie w spokojnym tempie, przez zabawę.</p>
       <div class="osoba">
         <h3>Aleksandra Muzyk</h3>
         <p class="rola">założycielka, trenerka pływania, fitness i przygotowania motorycznego</p>
         <p>Specjalistka od pływania niemowląt i małych dzieci, szkoleniowiec aqua fitness. Przez 10 lat trenowała pływanie wyczynowe w AZS AWFiS Gdańsk, wielokrotna finalistka Mistrzostw Polski Juniorów i Seniorów, brązowa medalistka Mistrzostw Polski na 200 m stylem klasycznym.</p>
       </div>
-      <a class="przycisk bi" href="#zapisy">Zapisz dziecko na zajęcia</a>
+      <a class="przycisk bi" href="#rezerwacja">Zarezerwuj termin</a>
     </div>
   </div>
   <svg class="fala-d" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 50c120-26 240-40 360-30s240 42 360 38 240-46 360-48 240 20 360 34v36H0z"/></svg>
@@ -389,10 +415,9 @@ footer a:hover{text-decoration:underline}
     </div>
     <div class="lokalizacje">
       <div class="lista-lok">
-        <button class="lok" type="button" aria-pressed="true" data-q="OSiR Mokotów, Niegocińska 2A, Warszawa"><h3>OSiR Mokotów</h3><p class="adr">ul. Niegocińska 2A, Warszawa</p><p>Aqua Baby, Aqua Kids, zajęcia indywidualne. Basen rekreacyjny 1,20-1,40 m i sportowy, woda 30°C, bezpłatny parking.</p></button>
-        <button class="lok" type="button" aria-pressed="false" data-q="Warszawski Uniwersytet Medyczny, Księcia Trojdena 2C, Warszawa"><h3>CRS WUM Ochota</h3><p class="adr">ul. Księcia Trojdena 2C, Warszawa</p><p>Aqua Kids i zajęcia indywidualne. Basen rekreacyjny 1,10-1,30 m, parking płatny.</p></button>
-        <button class="lok" type="button" aria-pressed="false" data-q="Wodny Park Warszawianka, Warszawa"><h3>Wodny Park Warszawianka</h3><p class="adr">Warszawa, Mokotów</p><p>Aqua fitness dla wszystkich od 16. roku życia, także dla kobiet w ciąży.</p></button>
-        <button class="lok" type="button" aria-pressed="false" data-q="ul. Armii Krajowej 22, 81-372 Gdynia"><h3>Gdynia</h3><p class="adr">ul. Armii Krajowej 22, Gdynia</p><p>Zajęcia w Trójmieście i letni obóz sportowo-rozwojowy.</p></button>
+        <button class="lok" type="button" aria-pressed="true" data-q="OSiR Mokotów, Niegocińska 2A, Warszawa"><h3>OSiR Mokotów</h3><p class="adr">ul. Niegocińska 2A, Warszawa</p><p>Lekcje dla niemowląt, dzieci i dorosłych. Basen rekreacyjny 1,20-1,40 m i sportowy 1,40-1,80 m, woda 30°C, bezpłatny parking.</p></button>
+        <button class="lok" type="button" aria-pressed="false" data-q="Warszawski Uniwersytet Medyczny, Księcia Trojdena 2C, Warszawa"><h3>CRS WUM Ochota</h3><p class="adr">ul. Księcia Trojdena 2C, Warszawa</p><p>Lekcje dla dzieci i dorosłych. Basen rekreacyjny 1,10-1,30 m, parking płatny.</p></button>
+        <button class="lok" type="button" aria-pressed="false" data-q="ul. Armii Krajowej 22, 81-372 Gdynia"><h3>Gdynia</h3><p class="adr">ul. Armii Krajowej 22, Gdynia</p><p>Lekcje indywidualne w Trójmieście.</p></button>
       </div>
       <div class="mapa" id="mapa">
         <div class="fasada">
@@ -431,36 +456,56 @@ footer a:hover{text-decoration:underline}
   </div>
 </section>
 
-<section class="sek" id="zapisy">
-  <div class="kont zapisy">
-    <div>
+<section class="sek" id="rezerwacja">
+  <div class="kont rez-siatka">
+    <div class="rez-opis">
       <svg class="fala-linia" viewBox="0 0 92 14" aria-hidden="true"><path d="M2 9c7-6 14-6 21 0s14 6 21 0 14-6 21 0 14 6 21 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
-      <h2>Zapisy na zajęcia</h2>
+      <h2>Zarezerwuj lekcję</h2>
       <ol class="kroki">
-        <li><b>Sprawdź poziom pływacki</b>Od Aqua Baby do grup Aqua Pro, żeby trafić do właściwej grupy.</li>
-        <li><b>Wybierz zajęcia i basen</b>Mokotów, Ochota, Warszawianka albo Gdynia.</li>
-        <li><b>Wyślij zgłoszenie</b>Odpiszemy z wolnymi terminami i potwierdzimy zapis.</li>
+        <li><b>Wybierz instruktora i basen</b>Widzisz dni i godziny, w których dany instruktor prowadzi lekcje.</li>
+        <li><b>Wybierz wolny termin</b>Kalendarz pokazuje tylko wolne godziny, zajęte znikają od razu po rezerwacji.</li>
+        <li><b>Opłać lekcję online</b>BLIK, szybki przelew albo karta. Potwierdzenie i przypomnienie przychodzą mailem.</li>
       </ol>
+      <p class="odwolanie">Lekcję można bezpłatnie odwołać do 24 godzin przed jej rozpoczęciem, jednym kliknięciem w mailu z potwierdzeniem.</p>
       <div class="kontakt-bezp">
         <a href="tel:+48511494432">+48 511 494 432</a>
         <a href="mailto:plywajcalyrok@gmail.com">plywajcalyrok@gmail.com</a>
         <span class="godz">Odbieramy od poniedziałku do piątku, 9:00-15:00. Jeśli nie odbieramy, to znaczy, że pływamy - zostaw SMS, oddzwonimy.</span>
       </div>
     </div>
-    <form id="formularz" novalidate>
-      <h3>Zgłoszenie na zajęcia</h3>
-      <div class="pola">
-        <div class="pole"><label for="f-imie">Imię i nazwisko</label><input id="f-imie" name="imie" autocomplete="name" required></div>
-        <div class="pole"><label for="f-tel">Telefon</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" required></div>
-        <div class="pole cale"><label for="f-mail">E-mail</label><input id="f-mail" name="mail" type="email" autocomplete="email"></div>
-        <div class="pole"><label for="f-zaj">Zajęcia</label><select id="f-zaj" name="zajecia"><option>Aqua Baby (3-24 miesiące)</option><option>Aqua Kids</option><option>Aqua Pro - indywidualne</option><option>Aqua Fitness</option><option>Grupa zorganizowana</option><option>Obóz letni</option></select></div>
-        <div class="pole"><label for="f-bas">Basen</label><select id="f-bas" name="basen"><option>OSiR Mokotów</option><option>CRS WUM Ochota</option><option>Wodny Park Warszawianka</option><option>Gdynia</option></select></div>
-        <div class="pole cale"><label for="f-wiek">Wiek dziecka / uczestnika i umiejętności</label><textarea id="f-wiek" name="wiadomosc" placeholder="np. Zosia, 4 lata, nie boi się wody, nie pływa jeszcze samodzielnie"></textarea></div>
-        <label class="zgoda"><input type="checkbox" required> Wyrażam zgodę na kontakt w sprawie zgłoszenia.</label>
+    <div class="rez" id="rez">
+      <div class="rez-krok">
+        <h3><span>1</span>Instruktor</h3>
+        <div class="wybor" data-grupa="instr">
+          <button type="button" class="opcja on" data-v="Aleksandra Muzyk" data-dni="1,2,3,4,5">Aleksandra Muzyk<small>pn-pt</small></button>
+          <button type="button" class="opcja" data-v="Drugi instruktor" data-dni="2,4,6">Drugi instruktor<small>wt, czw, sob</small></button>
+          <button type="button" class="opcja" data-v="Pierwszy wolny instruktor" data-dni="1,2,3,4,5,6">Pierwszy wolny<small>pn-sob</small></button>
+        </div>
       </div>
-      <button class="przycisk nb" type="submit">Wyślij zgłoszenie</button>
-      <p class="info-form" id="info-form" aria-live="polite"></p>
-    </form>
+      <div class="rez-krok dwa">
+        <div>
+          <h3><span>2</span>Basen</h3>
+          <select id="rez-basen" aria-label="Basen"><option>OSiR Mokotów</option><option>CRS WUM Ochota</option><option>Gdynia</option></select>
+        </div>
+        <div>
+          <h3><span>3</span>Lekcja</h3>
+          <select id="rez-lekcja" aria-label="Rodzaj lekcji"><option data-c="150">1 osoba, 30 minut - 150 zł</option><option data-c="200">1 osoba, 45 minut - 200 zł</option><option data-c="260">2 osoby, 30 minut - 260 zł</option><option data-c="360">2 osoby, 45 minut - 360 zł</option></select>
+        </div>
+      </div>
+      <div class="rez-krok">
+        <div class="kal-gora"><h3><span>4</span>Dzień</h3><div class="kal-nav"><button type="button" id="kal-w" aria-label="Poprzedni tydzień"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><span id="kal-zakres"></span><button type="button" id="kal-d" aria-label="Następny tydzień"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button></div></div>
+        <div class="kal" id="kal"></div>
+      </div>
+      <div class="rez-krok">
+        <h3><span>5</span>Godzina</h3>
+        <div class="godziny" id="godziny"></div>
+      </div>
+      <div class="rez-podsum">
+        <p id="rez-podsum">Wybierz dzień i godzinę.</p>
+        <button class="przycisk nb" type="button" id="rez-btn">Zarezerwuj i zapłać</button>
+        <p class="info-form" id="rez-info" aria-live="polite">Makieta: grafiki instruktorów i wolne terminy są przykładowe.</p>
+      </div>
+    </div>
   </div>
 </section>
 </main>
@@ -469,15 +514,15 @@ footer a:hover{text-decoration:underline}
   <div class="kont stopka-siatka">
     <div>
       <img class="lg" src="img/logo-biale.png" width="600" height="112" alt="FlowAqua Akademia Pływania" loading="lazy">
-      <p>Nauka pływania i aqua fitness w Warszawie i Gdyni. Pływaj z nami cały rok.</p>
+      <p>Indywidualna nauka pływania w Warszawie i Gdyni. Pływaj z nami cały rok.</p>
     </div>
     <div>
-      <h4>Zajęcia</h4>
-      <ul><li><a href="#zajecia">Aqua Baby</a></li><li><a href="#zajecia">Aqua Kids</a></li><li><a href="#zajecia">Aqua Pro</a></li><li><a href="#zajecia">Aqua Fitness</a></li><li><a href="#zajecia">Grupy zorganizowane</a></li></ul>
+      <h4>Lekcje</h4>
+      <ul><li><a href="#zajecia">Niemowlęta z rodzicem</a></li><li><a href="#zajecia">Dzieci</a></li><li><a href="#zajecia">Dorośli</a></li><li><a href="#zajecia">Doskonalenie techniki</a></li><li><a href="#zajecia">Lekcje dla 2-3 osób</a></li></ul>
     </div>
     <div>
       <h4>Akademia</h4>
-      <ul><li><a href="#o-nas">O nas</a></li><li><a href="#cennik">Cennik</a></li><li><a href="#baseny">Baseny</a></li><li><a href="#zapisy">Zapisy</a></li></ul>
+      <ul><li><a href="#o-nas">O nas</a></li><li><a href="#cennik">Cennik</a></li><li><a href="#baseny">Baseny</a></li><li><a href="#rezerwacja">Rezerwacja</a></li></ul>
     </div>
     <div>
       <h4>Kontakt</h4>
@@ -553,11 +598,33 @@ function laduj(){mapa.innerHTML='<iframe title="Mapa: '+q.replace(/"/g,'')+'" lo
 document.getElementById('pokaz-mape').onclick=laduj;
 document.querySelectorAll('.lok').forEach(function(b){b.onclick=function(){document.querySelectorAll('.lok').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');q=b.dataset.q;laduj()}});
 
-/* zapis z karty ustawia zajecia */
-document.querySelectorAll('[data-zaj]').forEach(function(a){a.addEventListener('click',function(){var s=document.getElementById('f-zaj');[].forEach.call(s.options,function(o,i){if(o.text.indexOf(a.dataset.zaj)===0)s.selectedIndex=i})})});
-
-/* formularz pokazowy */
-document.getElementById('formularz').addEventListener('submit',function(e){e.preventDefault();document.getElementById('info-form').textContent='To podgląd strony - formularz zacznie wysyłać zgłoszenia po wdrożeniu.'});
+/* makieta kalendarza rezerwacji (pokazowa) */
+var rz={instr:'Aleksandra Muzyk',dni:[1,2,3,4,5],dzien:null,godz:null,tydz:0};
+var DN=['nd','pn','wt','śr','czw','pt','sob'],MS=['sty','lut','mar','kwi','maj','cze','lip','sie','wrz','paź','lis','gru'];
+var GODZ=['8:00','9:00','10:00','11:00','15:00','16:00','17:00','18:00','19:00','20:00'];
+function start(){var d=new Date();d.setHours(0,0,0,0);var w=(d.getDay()+6)%7;d.setDate(d.getDate()-w+rz.tydz*7);return d}
+function zajete(d,i){var x=(d.getDate()*7+i*3+rz.instr.length)%5;return x===0||x===3}
+function kal(){var k=document.getElementById('kal'),s=start(),dz=new Date();dz.setHours(0,0,0,0);k.innerHTML='';
+ var e=new Date(s);e.setDate(e.getDate()+6);document.getElementById('kal-zakres').textContent=s.getDate()+' '+MS[s.getMonth()]+' - '+e.getDate()+' '+MS[e.getMonth()];
+ document.getElementById('kal-w').disabled=rz.tydz<=0;document.getElementById('kal-d').disabled=rz.tydz>=3;
+ for(var i=0;i<7;i++){(function(d){var b=document.createElement('button');b.type='button';b.className='dzien';
+  var wolne=GODZ.filter(function(g,j){return !zajete(d,j)}).length,ok=d>dz&&rz.dni.indexOf(d.getDay())>-1;
+  b.innerHTML='<small>'+DN[d.getDay()]+'</small><b>'+d.getDate()+'</b><i>'+(ok?wolne+' wolne':'')+'</i>';b.disabled=!ok;
+  if(rz.dzien&&+rz.dzien===+d)b.classList.add('on');
+  b.onclick=function(){rz.dzien=d;rz.godz=null;kal();godz()};k.appendChild(b)})(new Date(s.getFullYear(),s.getMonth(),s.getDate()+i))}}
+function godz(){var g=document.getElementById('godziny');g.innerHTML='';
+ if(!rz.dzien){g.innerHTML='<p class="godz-brak">Najpierw wybierz dzień.</p>';pods();return}
+ GODZ.forEach(function(h,j){var b=document.createElement('button');b.type='button';b.className='godz-b';b.textContent=h;b.disabled=zajete(rz.dzien,j);
+  if(rz.godz===h)b.classList.add('on');b.onclick=function(){rz.godz=h;godz()};g.appendChild(b)});pods()}
+function pods(){var p=document.getElementById('rez-podsum'),l=document.getElementById('rez-lekcja'),o=l.options[l.selectedIndex];
+ if(!rz.dzien||!rz.godz){p.textContent='Wybierz dzień i godzinę.';return}
+ p.textContent=rz.instr+', '+document.getElementById('rez-basen').value+', '+DN[rz.dzien.getDay()]+' '+rz.dzien.getDate()+' '+MS[rz.dzien.getMonth()]+', godz. '+rz.godz+' - '+o.dataset.c+' zł'}
+document.querySelectorAll('[data-grupa="instr"] .opcja').forEach(function(b){b.onclick=function(){document.querySelectorAll('[data-grupa="instr"] .opcja').forEach(function(x){x.classList.remove('on')});b.classList.add('on');rz.instr=b.dataset.v;rz.dni=b.dataset.dni.split(',').map(Number);rz.dzien=null;rz.godz=null;kal();godz()}});
+document.getElementById('kal-w').onclick=function(){if(rz.tydz>0){rz.tydz--;kal()}};
+document.getElementById('kal-d').onclick=function(){if(rz.tydz<3){rz.tydz++;kal()}};
+document.getElementById('rez-basen').onchange=pods;document.getElementById('rez-lekcja').onchange=pods;
+document.getElementById('rez-btn').onclick=function(){document.getElementById('rez-info').textContent='To podgląd strony - po wdrożeniu w tym miejscu otworzy się płatność online, a potwierdzenie przyjdzie mailem.'};
+kal();godz();
 })();
 </script>
 </body>
